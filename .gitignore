@@ -1,0 +1,47 @@
+# Live authentication, pairing, and executor state (at any depth).
+.state/
+.runtime/
+state.json
+state-*
+pairing.json
+pairing.json.tmp
+identity.json
+sdk_token
+self-test.json
+credentials.json
+credentials*.json
+*token*.json
+*.sock
+*.pid
+*.log
+
+# Local secrets and configuration.
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python environments, builds, caches, and test artifacts.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Local research inputs, raw captures, and editor/OS files.
+*.apk
+*.aab
+*.dex
+*.har
+decompiled/
+evidence/
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,25 @@
+name: Checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: macos-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: astral-sh/setup-uv@v7
+      - name: Check repository contents
+        run: python3 scripts/check_secrets.py
+      - name: Install dependencies
+        run: ./scripts/setup.sh
+      - name: Run local tests
+        run: ./scripts/test.sh

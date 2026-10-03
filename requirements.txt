@@ -1,0 +1,5 @@
+# Runtime versions used for the verified macOS bridge.
+cffi==2.1.1
+cryptography==50.0.2
+pycparser==3.0
+websockets==17.1
